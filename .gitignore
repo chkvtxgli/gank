@@ -1,0 +1,35 @@
+# AI Skills and agent tooling
+.agents/
+.claude/
+skills-lock.json
+
+# Binaries
+extractor
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file
+go.work
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+*.log

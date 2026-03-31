@@ -1,0 +1,27 @@
+transaction_pattern: '(?P<Fecha>\d{1,2}\s+[a-z]+\s+\d{4})\s+(?P<Concepto>.+?)\s+(?P<Monto>-?\$?\d{1,3}(?:[.,]\d{3})*[.,]\d{2})'
+group_date: Fecha
+group_description: Concepto
+group_amount: Monto
+month_map:
+  enero: "01"
+  febrero: "02"
+  marzo: "03"
+  abril: "04"
+  mayo: "05"
+  junio: "06"
+  julio: "07"
+  agosto: "08"
+  septiembre: "09"
+  octubre: "10"
+  noviembre: "11"
+  diciembre: "12"
+date_input_format: "%d %m %Y"
+section_start: Transacciones
+section_end: Costos
+exclude_patterns:
+  - Saldo al corte
+debit_is_positive: true
+account_assets: liabilities:credit:klar
+account_expenses: expenses:unknown
+account_income: income:unknown
+currency: "$"
