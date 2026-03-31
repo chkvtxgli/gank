@@ -8,12 +8,24 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+var configDir = "banks"
+
+func SetConfigDir(dir string) {
+	if dir != "" {
+		configDir = dir
+	}
+}
+
+func GetConfigDir() string {
+	return configDir
+}
+
 func LoadBank(bank, account string) (*BankConfig, error) {
 	var configPath string
 	if account != "" {
-		configPath = filepath.Join("banks", bank, account+".yaml")
+		configPath = filepath.Join(configDir, bank, account+".yaml")
 	} else {
-		configPath = filepath.Join("banks", bank+".yaml")
+		configPath = filepath.Join(configDir, bank+".yaml")
 	}
 
 	data, err := os.ReadFile(configPath)

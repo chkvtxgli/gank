@@ -33,3 +33,6 @@ Thumbs.db
 
 # Miscellaneous
 *.log
+
+# Sensitive files
+bank_pdfs/*
