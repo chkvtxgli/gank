@@ -158,4 +158,4 @@ make test
 
 ## License
 
-MIT
+GNU GENERAL PUBLIC LICENSE
